@@ -5,13 +5,10 @@
 
 
 <h:head>
+
 	<title>Student Table Demo</title>
 
-	<style>
-.error {
-	color: red
-}
-</style>
+	<h:outputStylesheet library="css" name="style.css" />
 
 </h:head>
 
@@ -23,7 +20,8 @@
 	<hr />
 
 	<h:dataTable value="#{studentDataUtil.students}" var="tempStudent"
-		border="1">
+		styleClass="demo-table" headerClass="demo-table-header"
+		rowClasses="demo-table-odd-row,demo-table-even-row">
 
 		<h:column>
 			<!--  the column header -->
